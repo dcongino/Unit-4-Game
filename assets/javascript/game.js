@@ -35,10 +35,43 @@ function setup(){
 
 //Onclick function that says on click of any crystal, add the number to the player score
     //Check if current score is less than, equal to, or greater than target number
+    $("#bluegem").on("click", function(){gemClick("blue")});
+    $("#redgem").on("click", function(){gemClick("red")});
+    $("#greengem").on("click", function(){gemClick("green")});
+    $("#yellowgem").on("click", function(){gemClick("yellow")});
+
+
+function gemClick(color)
+{
+    if(color == "blue")
+    {
+        currentScore = crystal1 + currentScore;
+        document.getElementById("score").innerHTML = currentScore
+        //Update currentScore
+    }
+    else if(color == "green")
+    {
+        currentScore = crystal2 + currentScore;
+        document.getElementById("score").innerHTML = currentScore
+    }
+    else if(color == "red")
+    {
+        currentScore = crystal3 + currentScore;
+        document.getElementById("score").innerHTML = currentScore
+    }
+    else if(color == "yellow")
+    {
+        currentScore = crystal4 + currentScore;
+        document.getElementById("score").innerHTML = currentScore
+    }
+    if(currentScore = targetScore){
+        //Do stuff
+    }
+    else if(currentScore > targetScore){
+        //Do stuff
+    }
+}
     
-    $("#bluegem").on("click", function() {
-        ;
-    });
         
 
     
