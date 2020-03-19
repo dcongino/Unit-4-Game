@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="assets/css/reset.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">  
+ 
+</head>
+<body>
+
+<div class = "container">
+    <div class = "row">
+        <div class = "col-md-12 text-center">Crystals Collector!</div>
+    </div>
+</div>
+<div class = "container">
+    <div class = "row">
+      <div class = "col-md-4 border border-secondary">
+          <ul class = "list-group">
+              <li class = "list-group-item">You will be given a random # to start the game.</li>
+              <li class = "list-group-item">There are 4 crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.</li>
+              <li class = "list-group-item">You win by matching your score to the random #, WITHOUT going over.</li>
+              <li class = "list-group-item">The value of each crystal is hidden until clicked upon!</li>
+              <li class = "list-group-item">Each time when the game starts, it will change the value of each crystal.</li>
+          </ul>
+     </div> 
+      <div class = "col-md-4 text-center border border-secondary">
+        <p>Wins: <span id="wins"></span></p>
+        <br>
+        <br>
+        <p>Losses: <span id="losses"></span></p>
+     </div>
+      <div class = "col-md-4 text-center border border-secondary">
+        <p>Number to Reach: <span id="number-to-guess"></span></p>
+      </div>
+    </div> 
+</div>
+<div class = "container">
+  <div class = "row">
+    <div class = "col-md-8 text-center border border-secondary">
+      <div>
+        <img src="assets/images/Bluegem.jpg" class="gempics" id="bluegem" alt="image">
+        <img src="assets/images/Greengem.jpg" class="gempics" id="greengem" alt="image">
+        <img src="assets/images/Redgem.jpg" class="gempics" id="redgem" alt="image">
+        <img src="assets/images/Yellowgem.jpg" class="gempics" id="yellowgem" alt="image">
+      </div>
+    </div>
+    <div class = "col-md-4 text-center border border-secondary">
+      <p>Your Score: <span id="score"></span></p>
+    </div>
+  </div>
+  
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" src="assets/javascript/game.js"></script>
+  <script type="text/javascript" src="assets/javascript/game.js"></script>    
+</body>
+</html>
