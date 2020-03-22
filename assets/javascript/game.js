@@ -9,7 +9,7 @@ var crystal4;
 var currentScore = 0;
 var targetScore = 0;
 //Call setup function
-setup();
+setup ()
 //Function that sets up a new game
 function setup(){
    //Change target number
@@ -31,7 +31,19 @@ function setup(){
     document.getElementById("score").innerHTML = currentScore;
 
 }
-    
+function nextStep() {
+    targetScore = Math.floor(Math.random() * 40) + 20;
+  //Change current score
+    currentScore = 0;
+    //Change crystal numbers
+    crystal1 = Math.floor(Math.random() * 10);
+    crystal2 = Math.floor(Math.random() * 10);
+    crystal3 = Math.floor(Math.random() * 10);
+    crystal4 = Math.floor(Math.random() * 10);
+    if (crystal1 % 2 == 0) {
+        crystal1++;
+    }
+}    
 
 //Onclick function that says on click of any crystal, add the number to the player score
     //Check if current score is less than, equal to, or greater than target number
@@ -47,32 +59,44 @@ function gemClick(color)
     {
         currentScore = crystal1 + currentScore;
         document.getElementById("score").innerHTML = currentScore
+        console.log(crystal1)
         //Update currentScore
     }
-    else if(color == "green")
+    if(color == "green")
     {
         currentScore = crystal2 + currentScore;
         document.getElementById("score").innerHTML = currentScore
+        console.log(crystal2)  
     }
-    else if(color == "red")
+    if(color == "red")
     {
         currentScore = crystal3 + currentScore;
         document.getElementById("score").innerHTML = currentScore
+        console.log(crystal3)
     }
-    else if(color == "yellow")
+    if(color == "yellow")
     {
         currentScore = crystal4 + currentScore;
         document.getElementById("score").innerHTML = currentScore
+        console.log(crystal4)
     }
-    if(currentScore = targetScore){
+
+    if(currentScore === targetScore) {
+        alert("You Win!"); wins++;
+        document.getElementById('wins').innerHTML = wins
+        setup ()
         //Do stuff
     }
-    else if(currentScore > targetScore){
+    if(currentScore > targetScore) {
+        alert("You Lose!"); losses++;
+        document.getElementById('losses').innerHTML = losses
+        setup ()
+
+
         //Do stuff
     }
 }
-    
-        
+
 
     
         //If less than, do nothing

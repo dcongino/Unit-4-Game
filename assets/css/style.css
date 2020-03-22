@@ -1,3 +1,9 @@
+
+body {
+    background-image: url("assets/images/Skybackground.jpg");
+}
+
+
 .list-group {
     font-size: smaller;
 }
@@ -8,5 +14,15 @@
 
 .gempics {
     height: 150px;
+    width: auto;
+}
+
+#gemgoal {
+    width: auto;
+    height: 200px;
+}
+
+#yourscore {
+    height: 100px;
     width: auto;
 }
